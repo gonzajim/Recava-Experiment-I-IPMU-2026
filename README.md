@@ -39,45 +39,64 @@ The following chart illustrates the performance optimization path for each resea
 
 The quality assessment of the responses is performed by a specialized ensemble-based Small Language adversarial models using the following criteria. Each dimension accounts for **20%** of the final aggregated score through a **Choquet integral**, which ensures that excellence in one area does not mask significant failures in another.
 
-#### **C1: Structural Integrity & Formatting (20%)**
-*Focuses on the visual and logical organization of the response.*
-* **C1.1: Visual Structure & Readability:** General flow and ease of reading.
-* **C1.2: Logical Hierarchy:** Proper organization of ideas from general to specific.
-* **C1.3: Information Density:** Balance between brevity and comprehensive detail.
-* **C1.4: Professional Terminology:** Use of appropriate industry-standard vocabulary.
-* **C1.5: Formatting Standards:** Correct use of Markdown (bolding, lists, headers).
+#### **Weight Scale Reference:**
+* **Very High:** 0.9
+* **High:** 0.7
+* **Medium:** 0.5
+* **Low:** 0.3
+* **Very Low:** 0.1
 
-#### **C2: Technical Accuracy & Normative Precision (20%)**
-*Focuses on the legal and regulatory "hardness" of the information.*
-* **C2.1: Conceptual Accuracy:** Correctness of the underlying sustainability theories.
-* **C2.2: Regulatory Recency:** Use of up-to-date laws (e.g., mentioning CSRD over NFRD).
-* **C2.3: Contextualization:** Adaptation to the specific sector and company size.
-* **C2.4: Normative Precision:** Explicit citations of Articles, Directives, and ISO standards.
-* **C2.5: Theoretical Consistency:** Alignment with international reporting frameworks.
+---
 
-#### **C3: Practical Utility & Decision-Making Support (20%)**
-*Focuses on how actionable the response is for a business leader.*
-* **C3.1: Actionability:** Provision of clear "how-to" steps.
-* **C3.2: Strategic Insight:** Identification of competitive advantages or business risks.
-* **C3.3: Implementation Feasibility:** Realism of the proposed actions.
-* **C3.4: Stakeholder Mapping:** Clear identification of affected parties.
-* **C3.5: Resource Guidance:** Mention of necessary tools or organizational resources.
+#### **C1: Clear and Hierarchical Information Structure**
+**Overall Criterion Weight: High (0.7)** *Description: Information must be organized in a structure that facilitates understanding, prioritizing fundamental elements and using a logical hierarchy.*
 
-#### **C4: Expert Stakeholder Alignment (20%)**
-*Focuses on the persona and tone expected in professional environments.*
-* **C4.1: Professional Tone:** Auditor-level formality and objective language.
-* **C4.2: Technical Depth:** Avoiding superficial summaries in favor of expert analysis.
-* **C4.3: Double Materiality Focus:** Recognition of both financial and impact materiality.
-* **C4.4: Narrative Cohesion:** Logical connection between the query and the solution.
-* **C4.5: Ethical & Social Sensitivity:** Proper handling of human rights and social topics.
+* **Aspects included:**
+    1. Dividing the response into clear sections using headers, subheadings, and hierarchical lists. (**Very High - 0.9**)
+    2. Prioritizing information based on relevance to the user (e.g., highlighting known or effective options first). (**High - 0.7**)
+    3. Including illustrative examples to clarify or deepen complex concepts. (**Medium - 0.5**)
+    4. Providing an initial introduction or summary that clarifies the objective and scope. (**Low - 0.3**)
+    5. Maintaining consistent formatting (spacing, bullets, numbering) for visual distinction. (**Low - 0.3**)
 
-#### **C5: Traceability & Control Mechanisms (20%)**
-*Focuses on the verification and long-term monitoring of the solution.*
-* **C5.1: Documentary Evidence:** Recommendation of specific logs and records.
-* **C5.2: Auditing Alignment:** Preparation for internal or external third-party audits.
-* **C5.3: External Support:** Identification of when to involve legal or technical experts.
-* **C5.4: Technology Integration:** Use of digital tools (GIS, blockchain, ERPs) for tracking.
-* **C5.5: Continuous Monitoring:** Establishment of specific KPIs and feedback loops.
+#### **C2: Precision, Relevance, and Contextual Adequacy**
+**Overall Criterion Weight: Very High (0.9)** *Description: Responses must be technical and precise but adapted to the user profile, offering useful, relevant, and directly applicable information. Specific regulations must be cited faithfully without mixing them with unrelated ones.*
+
+* **Aspects included:**
+    1. Adapting language and level of detail according to the query type and user profile. (**Low - 0.3**)
+    2. Including essential information without excessive technical jargon. (**Low - 0.3**)
+    3. Contextualizing the response, highlighting applicability to different sectors or company sizes. (**High - 0.7**)
+    4. Maintaining fidelity to the requested regulation, describing content exactly without mixing unrelated rules. (**Very High - 0.9**)
+    5. Avoiding inconsistencies or contradictions, ensuring a coherent message throughout. (**Very High - 0.9**)
+
+#### **C3: Practical and Decision-Oriented Approach**
+**Overall Criterion Weight: Medium (0.5)** *Description: Responses must include recommendations, advantages, disadvantages, and clear steps to facilitate the real-world application of the information.*
+
+* **Aspects included:**
+    1. Including concrete recommendations (e.g., "Ideal for companies that..."). (**High - 0.7**)
+    2. Highlighting advantages and disadvantages for informed decision-making. (**Low - 0.3**)
+    3. Providing concrete steps to implement measures or comply with requirements. (**Very High - 0.9**)
+    4. Suggesting indicators or metrics to evaluate effectiveness and impact. (**High - 0.7**)
+    5. Highlighting best practices or proven strategies to facilitate adoption. (**Very Low - 0.1**)
+
+#### **C4: Essential References and Additional Resources**
+**Overall Criterion Weight: Medium (0.5)** *Description: Responses must cite relevant sources, useful links, or regulations to back up information and allow the user to go deeper into the topic.*
+
+* **Aspects included:**
+    1. Providing links to official sources, practical guides, or recognized tools. (**Very Low - 0.1**)
+    2. Mentioning legal frameworks or international standards that back the information. (**Very High - 0.9**)
+    3. Incorporating specific guides or methodologies for complex technical topics. (**Medium - 0.5**)
+    4. Connecting with renowned institutions or experts in the field. (**Medium - 0.5**)
+    5. Ensuring references are up-to-date, indicating dates or versions when relevant. (**High - 0.7**)
+
+#### **C5: Temporal Clarity and Resource Management**
+**Overall Criterion Weight: Low (0.3)** *Description: Responses must offer clear information regarding estimated timelines, approximate costs, and necessary resources to implement proposed actions.*
+
+* **Aspects included:**
+    1. Indicating time estimations (e.g., "This process usually takes..."). (**Low - 0.3**)
+    2. Providing approximate cost information when possible. (**Very Low - 0.1**)
+    3. Highlighting additional resources (specialized staff, technology) required. (**Medium - 0.5**)
+    4. Specifying legal deadlines or timeframes. (**Very High - 0.9**)
+    5. Suggesting monitoring and control mechanisms. (**High - 0.7**)
 
 ---
 
